@@ -1,70 +1,276 @@
-# Getting Started with Create React App
+NimbusFlow Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AI-Powered Resume Matching Platform UI
 
-## Available Scripts
+⸻
 
-In the project directory, you can run:
+Overview
 
-### `npm start`
+NimbusFlow Frontend is a modern React-based user interface for the NimbusFlow AI Resume Matching Platform.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend allows users to:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Upload resumes
+* Create and manage job descriptions
+* Analyze resume-job match scores
+* View AI-powered ATS recommendations
+* Detect missing skills
+* Authenticate securely using JWT
 
-### `npm test`
+The application communicates with a cloud-native Spring Boot microservices backend through an API Gateway.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+⸻
 
-### `npm run build`
+Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Authentication
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* JWT-based login
+* Secure API integration
+* Protected routes
+* Token persistence
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Resume Management
 
-### `npm run eject`
+* Upload resumes
+* View uploaded resumes
+* Analyze resume-job compatibility
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Job Management
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Create job descriptions
+* View job listings
+* Manage skills and requirements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+AI Resume Analysis
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* AI semantic matching
+* Match score visualization
+* Missing skills detection
+* ATS optimization suggestions
+* LLM-generated recommendations
 
-## Learn More
+Modern UI
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Responsive design
+* Tailwind CSS styling
+* Dashboard-style layout
+* Interactive analysis cards
+* User-friendly workflow
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+⸻
 
-### Code Splitting
+Technology Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Technology	Usage
+React	Frontend framework
+Tailwind CSS	Styling
+Axios	API communication
+JWT	Authentication
+React Hooks	State management
+Docker	Containerization
 
-### Analyzing the Bundle Size
+⸻
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Project Structure
 
-### Making a Progressive Web App
+nimbusflow-frontend/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── styles/
+│   └── App.js
+│
+├── Dockerfile
+├── package.json
+└── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+⸻
 
-### Advanced Configuration
+Frontend Screens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Dashboard
 
-### Deployment
+* Resume upload
+* Job management
+* Match analysis
+* AI insights
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Match Analysis
 
-### `npm run build` fails to minify
+Displays:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Match Score
+* Semantic Score
+* Alignment Score
+* Matched Skills
+* Missing Skills
+* AI Recommendations
+
+⸻
+
+Backend Integration
+
+The frontend communicates through:
+
+http://localhost:8080
+
+using:
+
+* Spring Cloud Gateway
+* JWT-secured APIs
+* REST endpoints
+
+⸻
+
+Local Development Setup
+
+Prerequisites
+
+Install:
+
+* Node.js
+* npm
+* Docker (optional)
+
+⸻
+
+Clone Repository
+
+git clone <your-frontend-repository-url>
+
+⸻
+
+Install Dependencies
+
+npm install
+
+⸻
+
+Start Development Server
+
+npm start
+
+Frontend runs at:
+
+http://localhost:3000
+
+⸻
+
+Environment Configuration
+
+Create:
+
+.env
+
+Example:
+
+REACT_APP_API_URL=http://localhost:8080
+
+⸻
+
+Docker Setup
+
+Build Frontend
+
+docker build -t nimbusflow-frontend .
+
+Run Frontend
+
+docker run -p 3000:3000 nimbusflow-frontend
+
+⸻
+
+API Features
+
+Resume APIs
+
+* Upload resume
+* Retrieve resumes
+* Match analysis
+
+Job APIs
+
+* Create job
+* Retrieve jobs
+* Manage skills
+
+Auth APIs
+
+* Login
+* JWT token generation
+* Secure API access
+
+⸻
+
+Security
+
+The frontend supports:
+
+* JWT token storage
+* Secure API authorization
+* Protected API requests
+* Session persistence
+
+⸻
+
+Future Enhancements
+
+Frontend Improvements
+
+* Dark mode
+* Real-time notifications
+* Analytics dashboard
+* Resume preview
+* AI chat assistant
+* Drag-and-drop uploads
+* Advanced charts
+
+Cloud-Native Enhancements
+
+* Kubernetes deployment
+* CI/CD pipeline
+* CDN hosting
+* Monitoring dashboards
+
+⸻
+
+Production Deployment Goals
+
+Planned deployment targets:
+
+* Kubernetes
+* Docker containers
+* Nginx reverse proxy
+* Cloud hosting
+* CI/CD automation
+
+⸻
+
+Related Backend Repository
+
+NimbusFlow Backend contains:
+
+* Spring Boot microservices
+* AI matching engine
+* PostgreSQL integration
+* Docker infrastructure
+* JWT authentication
+* API Gateway
+
+⸻
+
+Author
+
+Sapan Bhandari
+
+Software Engineer | Java | Spring Boot | React | AI | Cloud Engineering
+
+⸻
+
+License
+
+This project is for educational and portfolio purposes.
