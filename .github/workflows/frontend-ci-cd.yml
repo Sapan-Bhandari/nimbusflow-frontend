@@ -40,12 +40,3 @@ jobs:
       - name: Push Frontend Docker Image
         run: |
           docker push sapan18/nimbusflow-frontend:v1
-
-      - name: Setup Kubeconfig
-        run: |
-          mkdir -p ~/.kube
-          echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > ~/.kube/config
-
-      - name: Restart Frontend Deployment
-        run: |
-          kubectl rollout restart deployment frontend -n nimbusflow
